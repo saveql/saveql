@@ -6,9 +6,9 @@ import jakarta.enterprise.event.Observes;
 import jakarta.transaction.Transactional;
 import org.jboss.logging.Logger;
 
-public class StartupService {
+public class Startup {
 
-    private static final Logger LOG = Logger.getLogger(StartupService.class);
+    private static final Logger LOG = Logger.getLogger(Startup.class);
 
     @Transactional
     public void onStart(@Observes StartupEvent event) {
