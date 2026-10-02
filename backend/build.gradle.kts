@@ -24,6 +24,8 @@ dependencies {
     implementation("io.quarkus:quarkus-jdbc-postgresql")
     implementation("io.quarkus:quarkus-hibernate-orm-panache")
     implementation("io.quarkus:quarkus-hibernate-validator")
+    implementation("io.quarkus:quarkus-mailer")
+    implementation("io.smallrye.reactive:smallrye-mutiny-vertx-web-client")
 
     compileOnly("org.projectlombok:lombok:+")
     annotationProcessor("org.projectlombok:lombok:+")

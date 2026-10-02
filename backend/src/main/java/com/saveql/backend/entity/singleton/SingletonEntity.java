@@ -1,13 +1,13 @@
 package com.saveql.backend.entity.singleton;
 
+import com.saveql.backend.entity.base.AbstractAuditingEntity;
+import com.saveql.backend.entity.base.AuditingEntityListener;
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
-import jakarta.persistence.CheckConstraint;
-import jakarta.persistence.Column;
-import jakarta.persistence.Id;
-import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.*;
 
 @MappedSuperclass
-public abstract class SingletonEntity extends PanacheEntityBase {
+@EntityListeners(AuditingEntityListener.class)
+public abstract class SingletonEntity extends AbstractAuditingEntity {
 
     public static final Long SINGLETON_ID = 1L;
 

@@ -1,7 +1,9 @@
 package com.saveql.backend.entity.system;
 
+import com.saveql.backend.entity.base.AuditingEntityListener;
 import com.saveql.backend.entity.singleton.SingletonEntity;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EntityListeners;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
