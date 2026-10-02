@@ -12,12 +12,12 @@ public class Startup {
 
     @Transactional
     public void onStart(@Observes StartupEvent event) {
-        LOG.info("Checking smtp settings...");
+        LOG.info("Checking system settings...");
 
         if (SystemInfo.findById(SystemInfo.SINGLETON_ID) == null) {
             SystemInfo settings = new SystemInfo();
             settings.persist();
-            LOG.info("Default smtp settings configured!");
+            LOG.info("Default system settings configured!");
         }
     }
 
